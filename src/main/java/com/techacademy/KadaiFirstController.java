@@ -31,7 +31,6 @@ public class KadaiFirstController {
         String weekday2 = weekday1.getDisplayName(Textstyle.FULL,Locale.ENGLISH);
         return weekday2;
         }
-
     
     @GetMapping("/plus/{val1}/{val2}")
     public String calcPlus(@PathVariable int val1, @PathVariable int val2) {
