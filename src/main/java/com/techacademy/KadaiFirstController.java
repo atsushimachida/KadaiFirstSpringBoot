@@ -18,8 +18,8 @@ public class KadaiFirstController {
     }
 
     @GetMapping("dayofweek/{val1}/")
-    public String dispDayOfWeek(@PathVariable int val1){
-        String days = String.valueOf(val1);
+    public String dispDayOfWeek(@PathVariable String val1){
+        String days = val1;
         String A = days.substring(0,4);
         String B = days.substring(4,6);
         String C = days.substring(6,8);
@@ -27,9 +27,9 @@ public class KadaiFirstController {
         int month = Integer.parseInt(B);
         int day = Integer.parseInt(C);
         LocalDate  date = LocalDate.of(year, month, day);
-        String weekday1 = date.getDayOfWeek().getDisplayName(TextStyle.FULL,Locale.ENGLISH);
-        return weekday1;
+        return date.getDayOfWeek().getDisplayName(TextStyle.FULL,Locale.ENGLISH);
         }
+    
     
     @GetMapping("/plus/{val1}/{val2}")
     public String calcPlus(@PathVariable int val1, @PathVariable int val2) {
