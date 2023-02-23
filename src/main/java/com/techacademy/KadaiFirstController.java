@@ -16,7 +16,7 @@ public class KadaiFirstController {
     public String index() {
         return "Hello SpringBoot!";
     }
-
+    
     @GetMapping("dayofweek/{val1}/")
     public String dispDayOfWeek(@PathVariable String val1){
         String days = val1;
